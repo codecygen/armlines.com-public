@@ -1,0 +1,97 @@
+.section-contact {
+  margin: 3rem 0 6rem;
+}
+
+.contact-r1 {
+  text-align: center;
+  height: 8rem;
+  line-height: 100%;
+  padding-top: 7rem;
+}
+
+.contact-r1 h1, .contact-r2 h2 {
+  color: #929895;
+}
+
+.contact-r1 h1 {
+  display: inline-block;
+  font-size: 2.5rem;
+  vertical-align: middle;
+  font-family: "Playfair Display SC", serif;
+}
+
+.contact-r2 {
+  text-align: center;
+}
+
+.contact-r2 h2 {
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+.contact-r2c1, .contact-r2c2 {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.contact-r2c1 * {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input, textarea {
+  display: inline-block;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+input {
+  text-transform: capitalize;
+}
+
+.email-input {
+  text-transform: lowercase;
+}
+
+.email-input::placeholder {
+  text-transform: capitalize;
+}
+
+button {
+  text-align: right;
+}
+
+@media(max-width: 820px) {
+  .section-contact {
+    margin: 1rem 0 6rem;
+  }
+
+  .contact-r2c1, .contact-r2c2 {
+    width: 100%;
+  }
+
+  .contact-r2c2 {
+    margin-top: 3rem;
+  }
+
+  .contact-r1 {
+    height: 5.5rem;
+  }
+}
+
+@media(max-width: 380px) {
+  .contact-r1 h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media(max-width: 250px) {
+  .contact-r1 h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-r2 .phone-number {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,92 @@
+/*
+This is for headings
+font-family: 'Enriqueta', serif;
+This is for paragraph.
+font-family: 'Spectral', serif;
+*/
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  /* Cursor size should be 36 x 36 px */
+  /* cursor: url("http://localhost:27815/pictures/cursors/cursor.png") 10 2, default; */
+}
+
+body, header {
+  background-color: #FBF8F5;
+}
+
+header, nav, section, footer {
+  padding: 0 15%;
+}
+
+h1, h2, h3, h4, h5, h6, p, article {
+  letter-spacing: 0.2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Enriqueta', serif;
+  font-size: 1.25rem;
+}
+
+p, article {
+  font-family: 'Spectral', serif;
+  font-size: 1.25rem;
+  font-weight: 550;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: #768078;
+  color: #FBF8F5;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 250ms ease-in-out;
+  transition: transform 150ms ease;
+}
+
+button:hover {
+  background-color: #779d7f;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+.logo-img {
+  height: 3rem;
+}
+
+.logo-img:hover {
+  -webkit-filter: opacity(50%);
+  filter: opacity(50%);
+  transition: all 0.2s ease-in-out;
+}
+
+.no-user-select {
+  user-select: none;
+}
+
+@media(max0width: 500px) {
+  header, nav, section, footer {
+    padding: 0 10%;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media(max-width: 250px) {
+  button {
+    font-size: 0.9rem;
+  }
+}

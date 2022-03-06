@@ -1,0 +1,118 @@
+.filler-under-header {
+  display: none;
+}
+
+.landing-section {
+  background-image: -webkit-linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url("/pictures/wallpapers/landing-wallpaper.jpg");
+  background-image: -o-linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url("/pictures/wallpapers/landing-wallpaper.jpg");
+  background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url("/pictures/wallpapers/landing-wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  /* This one prevents browser to autoscroll on element change. Autoscroll happens especially in Chrome browsers. */
+  overflow-anchor: none;
+}
+/* asdas */
+.landing-section > div {
+  padding-top: 7rem;
+}
+
+.landing-c1, .landing-c2 {
+ display: inline-block;
+ width: 50%;
+ vertical-align: middle;
+ text-align: center;
+}
+
+.landing-c1 {
+  position: relative;
+  height: 30rem;
+}
+
+.landing-section img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  transition: width 0.5s;
+}
+
+.landing-section img:hover {
+  width: 72%;
+}
+
+.landing-h1 {
+  width: 70%;
+  margin: 0 auto 5rem;
+  font-size: 2rem;
+}
+
+@media(max-width: 1300px) {
+  .landing-section img {
+    width: 80%;
+  }
+}
+
+@media(max-width: 900px) {
+  .landing-section {
+    padding-top: 4rem;
+  }
+
+  .landing-c1, .landing-c2 {
+     display: block;
+     width: 100%;
+  }
+
+  .landing-c1 {
+     padding-bottom: 4rem;
+  }
+
+  .landing-section img {
+    margin-bottom: 5rem;
+    width: 80%;
+  }
+}
+
+@media(max-width: 850px) {
+  .landing-section > div {
+    padding-top: 4rem;
+  }
+}
+
+@media(max-width: 600px) {
+  .landing-section {
+    padding-top: 2rem;
+  }
+
+  .landing-c1 {
+     padding-bottom: 8rem;
+  }
+
+  .landing-section img {
+    width: 100%;
+  }
+
+  .landing-c1 {
+    height: 20rem;
+  }
+
+  .landing-h1 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
+
+@media(max-width: 500px) {
+  .landing-section {
+    padding-top: 2rem;
+  }
+
+  .landing-c1 {
+     padding-bottom: 2rem;
+  }
+}

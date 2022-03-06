@@ -1,0 +1,149 @@
+footer {
+  background-color: #DFDDDF;
+  padding-bottom: 2rem;
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer-r1, .footer-r2, .footer-r4 {
+  user-select: none;
+}
+
+.footer-r1c1, .footer-r1c2 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-r1c1 {
+  width: 20rem;
+}
+
+.footer-r1c2 {
+  width: calc(100% - 20rem);
+}
+
+.footer-r1c1 div {
+  display: inline-block;
+  width: 50%;
+  height: 6rem;
+  position: relative;
+  vertical-align: middle;
+}
+
+.footer-r1c1 h3 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.footer-r1c2 {
+  text-align: right;
+}
+
+.footer-r1c2 img {
+  vertical-align: middle;
+}
+
+.footer-r2 p {
+  text-align: right;
+  margin: 0;
+}
+
+.footer-r2:hover p{
+  color: #554f4d;
+}
+
+.footer-r3 {
+  text-align: center;
+}
+
+.footer-r3 button {
+  margin-top: 3rem;
+}
+
+.footer-r3 p {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-r4 .nav-r3c1 {
+  text-align: left;
+}
+
+.footer-r4 .nav-r3c2 {
+  text-align: right;
+}
+
+@media(max-width: 850px) {
+  footer {
+    height: 35rem;
+  }
+
+  .footer-r1c1, .footer-r1c2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+  }
+
+  .footer-r1c2 {
+    top: 2rem;
+  }
+
+  .footer-r1c1 {
+    top: 5rem;
+  }
+
+  .footer-responsive-container {
+    position: relative;
+    top: 12rem;
+  }
+
+  .footer-r2 p {
+    text-align: center;
+  }
+}
+
+@media(max-width: 450px) {
+  footer {
+    height: 40rem;
+  }
+
+.footer-social-media, .footer-paragraph-container {
+    display: block;
+    width: 100%;
+  }
+
+  .footer-paragraph-container {
+    margin-top: 2rem;
+  }
+
+  .footer-r4 .nav-r3c1, .footer-r4 .nav-r3c2 {
+    text-align: center;
+  }
+}
+
+@media(max-width: 390px) {
+  footer p {
+    letter-spacing: 0.1rem;
+  }
+
+  footer h3 {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media(max-width: 290px) {
+  footer {
+    height: 42rem;
+  }
+}

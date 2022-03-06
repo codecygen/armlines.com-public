@@ -1,0 +1,128 @@
+<section class="product-photo-list-section">
+  <% let i = 0; %>
+  <% let z; %>
+  <% let loopLength; %>
+  <% let randNumList = []; %>
+
+  <% if(webPage === "index") { %>
+    <% loopLength = 2; %>
+    <% for(z = 0; z < loopLength; z++) { %>
+      <% randNumList.push(Math.floor(Math.random() * productPhotoList.length)); %>
+
+      <% if(randNumList[0] === randNumList[1] || randNumList[0] % 2 === randNumList[1] % 2) { %>
+        <% randNumList.pop(); %>
+        <% z = 0; %>
+      <% } %>
+    <% } %>
+  <% } else if(webPage === "collection") { %>
+    <% loopLength = productPhotoList.length; %>
+  <% } else { %>
+    <% loopLength = productPhotoList.length; %>
+  <% } %>
+
+  <% for(i; i < loopLength; i++) { %>
+    <% if(i % 2 != 0) { %>
+
+      <div class="product-info">
+        <div>
+          <% if(webPage === "index") { %>
+            <img class="product-photo no-user-select" src=<%= "/pictures/products/" + productPhotoList[randNumList[i]] %> alt="picture-no-display">
+          <% } else { %>
+            <img class="product-photo no-user-select" src=<%= "/pictures/products/" + productPhotoList[i] %> alt="picture-no-display">
+          <% } %>
+        </div
+
+        ><div>
+          <img class="motifs motif-bottom no-user-select" src="pictures/motifs/motif-divider.png" alt="motif-divider-img">
+          <% if(webPage === "index") { %>
+            <article>
+              <p><%= productDataList[randNumList[i]].firstParagraph %></p>
+              <p><%= productDataList[randNumList[i]].secondParagraph %></p>
+              <p><%= productDataList[randNumList[i]].thirdParagraph %></p>
+            </article>
+          <% } else { %>
+            <article>
+              <p><%= productDataList[i].firstParagraph %></p>
+              <p><%= productDataList[i].secondParagraph %></p>
+              <p><%= productDataList[i].thirdParagraph %></p>
+            </article>
+          <% } %>
+          <img class="motifs motif-bottom no-user-select" src="pictures/motifs/motif-divider.png" alt="motif-divider-img">
+        </div>
+      </div>
+
+      <% } else { %>
+        <div class="product-info">
+          <div>
+            <img class="motifs motif-bottom no-user-select" src="pictures/motifs/motif-divider.png" alt="motif-divider-img">
+            <% if(webPage === "index") { %>
+              <article>
+                <p><%= productDataList[randNumList[i]].firstParagraph %></p>
+                <p><%= productDataList[randNumList[i]].secondParagraph %></p>
+                <p><%= productDataList[randNumList[i]].thirdParagraph %></p>
+              </article>
+            <% } else { %>
+              <article>
+                <p><%= productDataList[i].firstParagraph %></p>
+                <p><%= productDataList[i].secondParagraph %></p>
+                <p><%= productDataList[i].thirdParagraph %></p>
+              </article>
+            <% } %>
+            <img class="motifs motif-bottom no-user-select" src="pictures/motifs/motif-divider.png" alt="motif-divider-img">
+          </div
+
+          ><div>
+            <% if(webPage === "index") { %>
+              <img class="product-photo no-user-select" src=<%= "/pictures/products/" + productPhotoList[randNumList[i]] %> alt="picture-no-display">
+            <% } else { %>
+              <img class="product-photo no-user-select" src=<%= "/pictures/products/" + productPhotoList[i] %> alt="picture-no-display">
+            <% } %>
+          </div>
+        </div>
+
+      <% } %>
+  <% } %>
+
+  <% if(webPage === "index") { %>
+    <a class="link-collection" href="#"><button type="button" name="button">Koleksiyonumuz</button></a>
+  <% } %>
+</section>
+
+
+<section class="product-photo-list-section-small-screen">
+  <% let c = 0; %>
+  <% for(c; c < loopLength; c++) { %>
+    <div class="product-info-small-screen">
+
+        <div>
+          <img class="motifs motif-bottom no-user-select" src="pictures/motifs/motif-divider.png" alt="motif-divider-img">
+          <% if(webPage === "index") { %>
+            <img class="product-photo no-user-select" src=<%= "/pictures/products/" + productPhotoList[randNumList[c]] %> alt="picture-no-display">
+          <% } else { %>
+            <img class="product-photo no-user-select" src=<%= "/pictures/products/" + productPhotoList[c] %> alt="picture-no-display">
+          <% } %>
+        </div
+
+        ><div class="product-data">
+          <% if(webPage === "index") { %>
+            <article>
+              <p><%= productDataList[randNumList[c]].firstParagraph %></p>
+              <p><%= productDataList[randNumList[c]].secondParagraph %></p>
+              <p><%= productDataList[randNumList[c]].thirdParagraph %></p>
+            </article>
+          <% } else { %>
+            <article>
+              <p><%= productDataList[c].firstParagraph %></p>
+              <p><%= productDataList[c].secondParagraph %></p>
+              <p><%= productDataList[c].thirdParagraph %></p>
+            </article>
+          <% } %>
+        </div>
+    </div>
+
+  <% } %>
+
+  <% if(webPage === "index") { %>
+    <a class="link-collection" href="#"><button type="button" name="button">Koleksiyonumuz</button></a>
+  <% } %>
+</section>

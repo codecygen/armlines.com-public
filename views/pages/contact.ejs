@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <!-- THIS SECTION IS FOR <head> TAG" -->
+  <%- include("../partials/so_head-tag.ejs") %>
+
+<body>
+
+  <!-- THIS SECTION IS FOR NAVIGATION BAR" -->
+  <%- include("../partials/so_header.ejs") %>
+
+  <section class="section-contact">
+    <div class="contact-r1">
+      <h1>Konuşalım</h1>
+    </div>
+
+    <div class="contact-r2">
+      <div class="contact-r2c1">
+        <h2>İrtibata geçelim!</h2>
+
+        <h3><a class="hover-underline-animation link-store" href="#">Bizi Bulun!</a></h3>
+        <p class="phone-number">+905543656941 </p>
+
+        <div class="nav-r3c1 no-user-select">
+          <a class="link-linkedin" href="#"><img class="nav-social-icons" src="pictures/social-media-icons/linkedin.png" alt="linkedin-img"></a>
+          <a class="link-facebook" href="#"><img class="nav-social-icons" src="pictures/social-media-icons/facebook.png" alt="facebook-img"></a>
+          <a class="link-twitter" href="#"><img class="nav-social-icons" src="pictures/social-media-icons/twitter.png" alt="twitter-img"></a>
+          <a class="link-instagram" href="#"><img class="nav-social-icons" src="pictures/social-media-icons/instagram.png" alt="instagram-img"></a>
+        </div>
+
+        <img class="motifs motif-bottom no-user-select" src="pictures/motifs/motif-divider.png" alt="motif-divider-img">
+      </div
+
+      ><div class="contact-r2c2 no-user-select">
+
+        <div>
+          <form action="/contact" method="post">
+            <input type="text" name="name" placeholder="İsminiz" required>
+            <input type="phone" name="phone" placeholder="Telefon Numaranız" required>
+            <input class="email-input" type="email" name="email" placeholder="Email Adresiniz" required>
+            <textarea name="message" rows="8" cols="30" placeholder="Yazmak İstedikleriniz (Opsiyonel)"></textarea>
+            <button type="submit" name="button">Bize Gönderin</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- THIS SECTION IS FOR FOOTER BAR" -->
+  <%- include("../partials/so_footer.ejs") %>
+
+  <!-- THIS SECTION IS FOR JAVASCRIPT FILES" -->
+  <%- include("../partials/so_javacript.ejs") %>
+
+</body>
+
+</html>
